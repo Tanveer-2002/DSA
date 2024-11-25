@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-     //Initializing array
+    //Initializing array
     int arr[10] = {75,6,3,4,0,22,4,5,2,29};
 
     //Printing Unsorted 
@@ -14,14 +14,17 @@ int main(){
 
     //Sorting array
     for(int i=0; i<(10-1); i++){
-        for(int j=0; j<(10-1); j++ ){
-            
-            if(arr[j]> arr[j+1]){
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+        int minIndex = i;
+        
+        for(int j=i+1; j<10; j++){
+            if(arr[minIndex] > arr[j]){
+                minIndex = j;
             }
         }
+
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
     }
 
     //Printing Sorted 
@@ -30,5 +33,4 @@ int main(){
         cout<<x<<",";
     }
     cout<<endl;
-
 }
