@@ -39,6 +39,7 @@ int main(){
     addEdge(adjMat,1,4);
     addEdge(adjMat,2,4);
     cout<<"Adjacency Matrix:"<<endl;
+    //Follow the diagram on g_diagram_1.pdf for better visualization
     printAdjMat(adjMat);
     printEdges(adjMat);
     
